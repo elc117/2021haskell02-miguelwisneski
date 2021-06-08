@@ -27,3 +27,19 @@ bigCircles f1 i1 = (filter (\i1 -> (pi * i1^2) > f1) i1)
 --6
 idadesEm :: [Int] -> Int -> [Int]
 idadesEm lista ano = (map (\lista -> ano - lista)lista)
+
+--7
+minhaSignum :: String -> String
+minhaSignum x
+  | (head x) == 'A'     = "Super " ++ x
+  | (head x) /= 'A'    = x
+
+changeNames :: [String] -> [String]
+changeNames str1 = (map (minhaSignum) str1)
+
+--8
+isShortWord :: String -> Bool 
+isShortWord s = length s < 5
+
+onlyShortWords :: [String] -> [String]
+onlyShortWords shortword = (filter (isShortWord) shortword)
